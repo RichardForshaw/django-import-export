@@ -28,6 +28,7 @@ class ImportForm(forms.Form):
 
 
 class ConfirmImportForm(forms.Form):
+    original_import_file_name = forms.CharField(widget=forms.HiddenInput())
     import_file_name = forms.CharField(widget=forms.HiddenInput())
     input_format = forms.CharField(widget=forms.HiddenInput())
 
